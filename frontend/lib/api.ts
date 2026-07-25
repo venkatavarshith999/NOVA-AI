@@ -1,4 +1,4 @@
-export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || (process.env.NODE_ENV === "production" ? "https://nova-ai-backend-production-c9f0.up.railway.app" : "http://localhost:8000");
 
 export type VerificationStatus = "verified" | "partially_verified" | "not_verified";
 
