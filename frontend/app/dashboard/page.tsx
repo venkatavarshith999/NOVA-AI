@@ -47,7 +47,7 @@ export default function DashboardPage() {
     }
   }
 
-  async function deleteReport(id: string, e: React.MouseEvent) {
+  async function deleteReport(id: number, e: React.MouseEvent) {
     e.stopPropagation();
     if (!confirm("Delete this report?")) return;
     try {
