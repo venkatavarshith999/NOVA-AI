@@ -10,7 +10,7 @@ import {
   Copy, Download, FileText, Menu, Trash2, MoreHorizontal
 } from 'lucide-react';
 import clsx from 'clsx';
-import { streamResearch, API_BASE, Report, StreamEvent } from '@/lib/api';
+import { streamResearch, API_BASE, Report, StreamEvent, Claim, Source, HallucinationFlag } from '@/lib/api';
 import { isLoggedIn, getUser, logout, authHeaders, User } from '@/lib/auth';
 
 interface ChatMessage {
