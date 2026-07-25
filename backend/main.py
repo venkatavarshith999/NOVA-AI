@@ -55,11 +55,9 @@ Input: {query}"""
 
 app = FastAPI(title="Nova AI API")
 
-origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001,http://localhost:3002").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in origins],
-    allow_origin_regex=r"https://.*\.vercel\.app|https://.*",
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
