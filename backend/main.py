@@ -93,6 +93,10 @@ class ExportRequest(BaseModel):
     report_json: dict
 
 
+@app.get("/")
+async def root():
+    return {"status": "ok", "message": "Nova AI Backend is running!"}
+
 @app.get("/api/health")
 async def health():
     # Attempt a simple db check implicitly or just return ok
